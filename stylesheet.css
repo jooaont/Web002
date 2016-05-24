@@ -30,10 +30,10 @@ p:first-child{
 
 .btn-base{
 	text-align: center;
-	heigth: 50px;
-	width:120px;
-	border-radius: 5px;
-	border: 2px solid #FFFF00;
+	heigth: 70px;
+	width:1500px;
+	border-radius: 8px;
+	border: 5px solid #FFFF00;
         margin-left:45%
         font-family: Verdana;
         background:#FFFF00;
