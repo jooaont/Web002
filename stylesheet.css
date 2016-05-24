@@ -26,6 +26,8 @@ a {
 	color: black;
 	font-family: Verdana;
 	text-align: center;
-	
-	
 }
+#tudo {
+  width: 760px;
+  margin:0 auto;			
+ }
