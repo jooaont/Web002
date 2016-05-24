@@ -19,14 +19,11 @@ div{
         margin-top:15%;
         margin-left:45%
         font-family: Verdana;
-
-
-	
-	
+        background:#FFFF00;
 }
 a {
 	text-decoration: none;
-	color: #FFFF00;
+	color: black;
 	font-family: Verdana;
 	
 	
