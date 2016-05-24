@@ -15,6 +15,10 @@ p{
 	color:#000080;
 	
 }
+p:first-child{
+	margin-top:100px;
+}
+
 div{
 	text-align: center;
 	heigth: 50px;
