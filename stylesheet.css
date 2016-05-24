@@ -1,3 +1,8 @@
+body{
+	margin: 0 auto;
+	text-align:center;
+	width:100%;
+}
 h1{
 	text-align: center;
 	font-family: Verdana;
@@ -27,7 +32,4 @@ a {
 	font-family: Verdana;
 	text-align: center;
 }
-#tudo {
-  width: 760px;
-  margin:0 auto;			
- }
+
