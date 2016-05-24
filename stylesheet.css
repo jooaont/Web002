@@ -19,7 +19,7 @@ p:first-child{
 	margin-top:350px;
 }
 
-div{
+.btn-base{
 	text-align: center;
 	heigth: 50px;
 	width:120px;
