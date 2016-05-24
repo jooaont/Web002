@@ -2,6 +2,11 @@ body{
 	margin: 0 auto;
 	text-align:center;
 	width:100%;
+	font-size:12px;
+}
+.conteudo{
+	display:block;
+	margin-top:50%;
 }
 h1{
 	text-align: center;
@@ -25,7 +30,6 @@ p:first-child{
 	width:120px;
 	border-radius: 5px;
 	border: 2px solid #FFFF00;
-        margin-top:15%;
         margin-left:45%
         font-family: Verdana;
         background:#FFFF00;
