@@ -1,5 +1,6 @@
 h1{
 	text-align: center;
+
 }
 p{
 	text-align: center;
@@ -10,9 +11,13 @@ div{
 	heigth: 50px;
 	width:120px;
 	border-radius: 3px;
-	border: 2px solid #6495ED;
+	border: 2px solid #8B4513;
 	text-align: center;
+        margin-top:15%;
+        margin-top:45%
 	margin: auto;
+
+
 	
 	
 }
