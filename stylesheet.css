@@ -14,13 +14,13 @@ body{
 }
 h1{
 	text-align: center;
-	font-family: Century ;
+	font-family: Comic ;
 	color:Black;
 }
 p{
 	text-align: center;
 	font-size: 30px;
-	font-family: Century;
+	font-family: Comic;
 	color:Black;
 	
 }
@@ -35,7 +35,7 @@ p:first-child{
 	border-radius: 1px;
 	border: 5px solid #696969;
         margin-left:45%
-        font-family: Century;
+        font-family: Comic;
         background:#696969;
         display:inline-block;
 }
@@ -47,5 +47,5 @@ a {
 	font-size:20px;
 }
 span{
-	color:#FFFF00;
+	color:black;
 }
