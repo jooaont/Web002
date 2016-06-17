@@ -13,12 +13,12 @@ body{
 	width:100%;
 }
 h1{
-	text-align: center;
+	text-align: super;
 	font-family: Arial ;
 	color:Black;
 }
 p{
-	text-align: center;
+	text-align: super;
 	font-size: 30px;
 	font-family: Arial;
 	color:Black;
@@ -29,7 +29,7 @@ p:first-child{
 }
 
 .btn-base{
-	text-align: center;
+	text-align: super;
 	heigth: 200px;
 	width:120px;
 	border-radius: 1px;
