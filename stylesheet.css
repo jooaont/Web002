@@ -1,6 +1,6 @@
 body{
 	margin: 0 auto;
-	text-align:;
+	text-align: center;
 	width:100%;
 	font-size:12px;
 }
@@ -13,12 +13,12 @@ body{
 	width:100%;
 }
 h1{
-	text-align: ;
+	text-align:center ;
 	font-family: Arial ;
 	color:Black;
 }
 p{
-	text-align: ;
+	text-align: center;
 	font-size: 30px;
 	font-family: Arial;
 	color:Black;
