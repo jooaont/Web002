@@ -17,6 +17,11 @@ h1{
 	font-family: Arial ;
 	color:Black;
 }
+h2{
+	font-family: Arial;
+	font-size:18px;
+	color: black;
+}
 p{
 	text-align: center;
 	font-size: 30px;
