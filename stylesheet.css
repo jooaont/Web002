@@ -1,15 +1,14 @@
 
 body{
-	background: url(rrornamental_REPEAT_2_drop_preview.png) no-repeat center top fixed;
-  		-webkit-background-size: cover;
-  		-moz-background-size: cover;
-  		-o-background-size: cover;
-  		background-size: cover;
-	}
 	margin: 0 auto ;
 	text-align: center;
 	width:50%;
 	font-size:12px;
+	background: url(http://www.cinemaqui.com.br/wp-content/uploads/2012/08/o-ditador-still.jpg) no-repeat center top fixed;
+  		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
 }
 .conteudo{
 	display:block;
