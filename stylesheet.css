@@ -1,63 +1,46 @@
-
-body{
-	margin: 0 auto ;
-	text-align: center;
-	width:50%;
-	font-size:12px;
-	background: url(http://www.cinemaqui.com.br/wp-content/uploads/2012/08/o-ditador-still.jpg) no-repeat center top fixed;
-  		-webkit-background-size: cover;
-  		-moz-background-size: cover;
-  		-o-background-size: cover;
-  		background-size: cover;
+.onoffswitch  {
+    posição:  parente ; width:  90px ;
+    --webkit-user-select: nenhum ; -moz-user-select: nenhum ; -ms-user-select:  nenhum ;
 }
-.conteudo{
-	display:block;
-	margin-top:25%;
+.onoffswitch-checkbox  {
+    display:  nenhum ;
 }
-
-.conteudo-botao{
-	display:block;
-	width:100%;
+.onoffswitch-label  {
+    display:  block ; overflow:  hidden ; cursor:  pointer ;
+    border:  2px  sólida  # 999999 ; border-radius:  20px ;
 }
-
-h1{
-	text-align:center ;
-	font-family: Arial ;
-	color:Black;
-	font-size:40px;
+.onoffswitch-interno  {
+    display:  block ; width:  200% ; margin-left:  -100% ;
+    transição:  margem de  0.3s  facilidade em  0s ;
 }
-h2{
-	font-family: Arial;
-	font-size:18px;
-	color: black;
+.onoffswitch-interno : antes ,  .onoffswitch-interno : depois de  {
+    display:  block ; float:  esquerda ; width:  50% ; height:  30px ; padding:  0 ; line-height:  30px ;
+    font-size:  14px ; color:  white ; font-family:  Trebuchet , Arial , sans-serif ; font-weight:  bold ;
+    box-sizing:  border-box ;
 }
-p{
-	text-align: center;
-	font-size: 20px;
-	font-family: Arial;
-	color:Black;
-	
+.onoffswitch-interno : antes  {
+    content: " ON ";
+    padding-left:  10px ;
+    background-color:  # 34A7C1 ; color:  #FFFFFF ;
 }
-p:first-child{
-	margin-top:350px;
+.onoffswitch-interno : depois de  {
+    content: " OFF ";
+    padding-right:  10px ;
+    background-color:  #EEEEEE ; color:  # 999999 ;
+    text-align:  direito ;
 }
-
-.btn-base{
-	text-align: super;
-	heigth: 200px;
-	width:120px;
-	border-radius: 1px;
-	border: 5px solid black;
-        margin-left:45%
-        font-family: Arial;
-        background:black;
-        display:inline-block;
+.onoffswitch-switch  {
+    display:  block ; width:  23px ; margin:  3.5px ;
+    background:  #FFFFFF ;
+    posição:  absoluto ; top:  0 ; bottom:  0 ;
+    direita:  56 pixels ;
+    border:  2px  sólida  # 999999 ; border-radius:  20px ;
+    transição:  todos  0.3s  facilidade em  0s ;
 }
-a {
-	text-decoration: none;
-	color: white;
-	font-family: Arial;
-	text-align: center;
-	font-size:15px;
+.onoffswitch-caixa : verificada  +  .onoffswitch-label  .onoffswitch-interno  {
+    margin-left:  0 ;
+}
+.onoffswitch-caixa : verificada  +  .onoffswitch-label  .onoffswitch-switch  {
+    certo:  0px ;
 }
 
