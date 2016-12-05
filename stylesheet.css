@@ -119,7 +119,9 @@
     background: -webkit-linear-gradient(#004010, #1A6600);
     background: linear-gradient(#004010, #1A6600);
 }
- 
+ .switch input:checked ~ label span{
+  right: -2px;
+}
  
 .switch input:checked ~ label span:before {
     content: "on";
