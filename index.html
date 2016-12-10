@@ -10,7 +10,9 @@
 		if (isset($_POST['LightON'])){
 	  exec("sudo python /var/www/RPY/liga.py");
 		$texto =" Comodo 01 ligado"
+
 		} else (isset($_POST['LightOFF'])) {
+	  exec("sudo python /var/www/RPY/desliga.py");
 		$texto= " Comodo 01 Desligado
 		}	
 
