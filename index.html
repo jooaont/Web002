@@ -5,6 +5,16 @@
     	
       <title> Automação </title>
     </head>
+	  <?php
+
+		if (isset($_POST['LightON'])){
+	  exec("sudo python /var/www/RPY/liga.py");
+		$texto =" Comodo 01 ligado"
+		} else (isset($_POST['LightOFF'])) {
+		$texto= " Comodo 01 Desligado
+		}	
+
+?>
     <body>
 	    <table style="width:100%">
 	  <tr>
@@ -15,7 +25,7 @@
 	  <tr>
 	    <td><label class="switch">
 		  <input type="checkbox">
-		  <div class="slider round"></div>
+		  <div class="slider round" name="LightON"></div>
 	    </label> Comodo 01 </td>
 	    <td><label class="switch">
 		  <input type="checkbox">
