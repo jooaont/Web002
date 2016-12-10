@@ -16,6 +16,15 @@
 		$texto= " Comodo 01 Desligado
 		}	
 
+		if (isset($_POST['OpenClosed'])){
+	  exec("sudo python /var/www/RPY/janelaaberta.py");
+		$texto =" Janela Aberta"
+
+		} else (isset($_POST['ClosedWindow'])) {
+	  exec("sudo python /var/www/RPY/janelafechada.py");
+		$texto= " Janela Fechada"
+		}	
+
 ?>
     <body>
 	    <table style="width:100%">
