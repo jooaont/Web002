@@ -13,7 +13,7 @@
 
 		} else (isset($_POST['LightOFF'])) {
 	  exec("sudo python /var/www/RPY/desliga.py");
-		$texto= " Comodo 01 Desligado
+		$texto= " Comodo Desligado"
 		}	
 
 		if (isset($_POST['OpenClosed'])){
@@ -24,6 +24,14 @@
 	  exec("sudo python /var/www/RPY/janelafechada.py");
 		$texto= " Janela Fechada"
 		}	
+		if (isset($_POST['GolfinhoON'])){
+	  exec("sudo python /var/www/RPY/golfinholigado.py");
+		$texto =" Golfinho ligado"
+
+		} else (isset($_POST['GolfinhoOFF'])) {
+	  exec("sudo python /var/www/RPY/golfinhodesligado.py");
+		$texto= " Golfinho Desligado"
+		}
 
 ?>
     <body>
@@ -40,11 +48,11 @@
 	    </label> Comodo 01 </td>
 	    <td><label class="switch">
 		  <input type="checkbox">
-		  <div class="slider round"></div>
+		  <div class="slider round" name="OpenClosed" name="ClosedWindow"></div>
 	    </label> Janela</td> 
 	    <td><label class="switch">
 		  <input type="checkbox">
-		  <div class="slider round"></div>
+		  <div class="slider round" name="GolfinhoON" name="GolfinhoOFF"></div>
 	    </label> Golfinho</td>
 	  </tr>
 	  <tr>
