@@ -1,251 +1,106 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
+  <html>
+    <head>
+    	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    	
+      <title> Automação </title>
+    </head>
+	  <?php
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-	
-    <meta charset="UTF-8">  
-    		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<link rel="icon" type="image/png" sizes="96x96" href="https://pbs.twimg.com/profile_images/575819086/twittersa_400x400.jpg">
-    <title>Automação</title>
-    
-    <?php
+		if (isset($_POST['LightON'])){
+	  exec("sudo python /var/www/RPY/liga.py");
+		$texto =" Comodo 01 ligado"
 
-		if (isset($_POST['C1ON'])){
-	  exec("sudo python ////liga.py");
-        echo " Comodo 01 Ligado "; 
-		
-		} if else (isset($_POST['C1OFF'])) {
-	  exec("sudo python ////desliga.py");
-        echo " Comodo 01 Desligado "; 
+		} else (isset($_POST['LightOFF'])) {
+	  exec("sudo python /var/www/RPY/desliga.py");
+		$texto= " Comodo Desligado"
+		}	
 
-		} if (isset($_POST['C2ON'])){
-	  exec("sudo python ////liga.py");
-        echo " Comodo 02 Ligado "; 
-		
-		} if else (isset($_POST['C2OFF'])) {
-	  exec("sudo python ////desliga.py");
-        echo " Comodo 02 Desligado "; 
+		if (isset($_POST['OpenClosed'])){
+	  exec("sudo python /var/www/RPY/janelaaberta.py");
+		$texto =" Janela Aberta"
 
-		} if (isset($_POST['C3ON'])){
-	  exec("sudo python ////liga.py");
-        echo " Comodo 03 Ligado "; 
-		
-		} if else (isset($_POST['C3OFF'])) {
-	  exec("sudo python ////desliga.py");
-        echo " Comodo 03 Desligado "; 
+		} else (isset($_POST['ClosedWindow'])) {
+	  exec("sudo python /var/www/RPY/janelafechada.py");
+		$texto= " Janela Fechada"
+		}	
+		if (isset($_POST['GolfinhoON'])){
+	  exec("sudo python /var/www/RPY/golfinholigado.py");
+		$texto =" Golfinho ligado"
 
-		} if (isset($_POST['C1ON'])){
-	  exec("sudo python ////liga.py");
-        echo " Comodo 04 Ligado "; 
-		
-		} if else (isset($_POST['C1OFF'])) {
-	  exec("sudo python ////desliga.py");
-        echo " Comodo 04 Desligado "; 
-
-		} if (isset($_POST['C1ON'])){
-	  exec("sudo python ////liga.py");
-        echo " Comodo 05 Ligado "; 
-		
-		} if else (isset($_POST['C1OFF'])) {
-	  exec("sudo python ////desliga.py");
-        echo " Comodo 05 Ligado "; 
-
-		} if (isset($_POST['C1ON'])){
-	  exec("sudo python ////liga.py");
-        echo " Comodo 06 Ligado "; 
-		
-		} if else (isset($_POST['C1OFF'])) {
-	  exec("sudo python ////desliga.py");
-        echo " Comodo 06 Desligado "; 
-
+		} else (isset($_POST['GolfinhoOFF'])) {
+	  exec("sudo python /var/www/RPY/golfinhodesligado.py");
+		$texto= " Golfinho Desligado"
 		}
-			
-    ?>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- application Core CSS -->
-    <link href="assets/css/main.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <script src="https://use.fontawesome.com/d1a2bd6b35.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <div class="container-fluid">
-    <!-- Page Content -->
-        <header class="header">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Controle Sistema de Automação</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-        </header>
-        <!-- /.row -->
-        <main >
-            <form method="post">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                 Luzes
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <table class="table table-striped">
-                                    <tbody>
-                                        <tr>
-                                            <td>Comodo 01</td>
-                                            <td>
-                                                <button type="submit" name="button" class="btn btn-success" name="C1ON">
-                                                    Liga
-                                                    <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
-                                                </button>
-                                                <button type="submit" name="button" class="btn btn-danger" name="C1OFF">
-                                                    Desliga
-                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                </button>
-                                            </td>
-                                            <td><span class="label label-success">Ativo</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Comodo 02</td>
-                                            <td>
-                                                <button type="submit" name="button" class="btn btn-success" name="C2ON">
-                                                    Liga
-                                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                                </button>
-                                                <button type="submit" name="button" class="btn btn-danger" name="C2Off">
-                                                    Desliga
-                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                </button>
-                                            </td>
-                                            <td><span class="label label-success">Ativo</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Comodo 03</td>
-                                            <td>
-                                                <button type="submit" name="button" class="btn btn-success" name="C3ON">
-                                                    Liga
-                                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                                </button>
-                                                <button type="submit" name="button" class="btn btn-danger" name="C3OFF">
-                                                    Desliga
-                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                </button>
-                                            </td>
-                                            <td><span class="label label-success">Ativo</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Comodo 04</td>
-                                            <td>
-                                                <button type="submit" name="button" class="btn btn-success" name="C4ON">
-                                                    Liga
-                                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                                </button>
-                                                <button type="submit" name="button" class="btn btn-danger" name="C4OFF">
-                                                    Desliga
-                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                </button>
-                                            </td>
-                                            <td><span class="label label-success">Ativo</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Comodo 05</td>
-                                            <td>
-                                                <button type="submit" name="button" class="btn btn-success" name="C5ON">
-                                                    Liga
-                                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                                </button>
-                                                <button type="submit" name="button" class="btn btn-danger" name="C5OFF">
-                                                    Desliga
-                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                </button>
-                                            </td>
-                                            <td><span class="label label-success">Ativo</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Comodo 06</td>
-                                            <td>
-                                                <button type="submit" name="button" class="btn btn-success" name="C6ON">
-                                                    Liga
-                                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                                </button>
-                                                <button type="submit" name="button" class="btn btn-danger" name="C6OFF">
-                                                    Desliga
-                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                </button>
-                                            </td>
-                                            <td><span class="label label-success">Ativo</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Motores
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-
-
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-
-                    </div>
-                    <!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Externo
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-
-
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-
-
-                    </div>
-                    <!-- /.col-lg-6 -->
-                </div>
-                <!-- /.row -->
-            </form>
-        </main>
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+?>
+    <body>
+	    <table style="width:100%">
+	  <tr>
+	    <th>Luzes</th>
+	    <th>Motores</th> 
+	    <th>Externo</th>
+	  </tr>
+	  <tr>
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round" name="LightON" name="LightOFF"></div>
+	    </label> Comodo 01 </td>
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round" name="OpenClosed" name="ClosedWindow"></div>
+	    </label> Janela</td> 
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round" name="GolfinhoON" name="GolfinhoOFF"></div>
+	    </label> Golfinho</td>
+	  </tr>
+	  <tr>
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round"></div>
+	    </label> Comodo 02</td>
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round"></div>
+	    </label> Portão</td> 
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round"></div>
+	    </label> Tomada</td>
+	  </tr>
+	  <tr>
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round"></div>
+	    </label>Comodo 03</td>
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round"></div>
+	    </label> Garagem</td> 
+	  </tr>
+	  <tr>
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round"></div>
+	    </label>Comodo 04</td>
+	  </tr>
+	  <tr>
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round"></div>
+	    </label>Comodo 05</td>
+	  </tr>
+	    <tr>
+	    <td><label class="switch">
+		  <input type="checkbox">
+		  <div class="slider round"></div>
+	    </label>Comodo 06</td>
+	  </tr>
+	
     
+    </body>
+
+	  
+    </html>
+    		}
