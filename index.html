@@ -9,6 +9,60 @@
     <meta name="author" content="">
 
     <title>Automação</title>
+    
+    <?php
+
+		if (isset($_POST['C1ON'])){
+	  exec("sudo python ////liga.py");
+        echo " Comodo 01 Ligado "; 
+		
+		} if else (isset($_POST['C1OFF'])) {
+	  exec("sudo python ////desliga.py");
+        echo " Comodo 01 Desligado "; 
+
+		} if (isset($_POST['C2ON'])){
+	  exec("sudo python ////liga.py");
+        echo " Comodo 02 Ligado "; 
+		
+		} if else (isset($_POST['C2OFF'])) {
+	  exec("sudo python ////desliga.py");
+        echo " Comodo 02 Desligado "; 
+
+		} if (isset($_POST['C3ON'])){
+	  exec("sudo python ////liga.py");
+        echo " Comodo 03 Ligado "; 
+		
+		} if else (isset($_POST['C3OFF'])) {
+	  exec("sudo python ////desliga.py");
+        echo " Comodo 03 Desligado "; 
+
+		} if (isset($_POST['C1ON'])){
+	  exec("sudo python ////liga.py");
+        echo " Comodo 04 Ligado "; 
+		
+		} if else (isset($_POST['C1OFF'])) {
+	  exec("sudo python ////desliga.py");
+        echo " Comodo 04 Desligado "; 
+
+		} if (isset($_POST['C1ON'])){
+	  exec("sudo python ////liga.py");
+        echo " Comodo 05 Ligado "; 
+		
+		} if else (isset($_POST['C1OFF'])) {
+	  exec("sudo python ////desliga.py");
+        echo " Comodo 05 Ligado "; 
+
+		} if (isset($_POST['C1ON'])){
+	  exec("sudo python ////liga.py");
+        echo " Comodo 06 Ligado "; 
+		
+		} if else (isset($_POST['C1OFF'])) {
+	  exec("sudo python ////desliga.py");
+        echo " Comodo 06 Desligado "; 
+
+		}
+			
+    ?>
 
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -57,11 +111,11 @@
                                         <tr>
                                             <td>Comodo 01</td>
                                             <td>
-                                                <button type="submit" name="button" class="btn btn-success">
+                                                <button type="submit" name="button" class="btn btn-success" name="C1ON">
                                                     Liga
                                                     <i class="fa fa-star" aria-hidden="true"></i>
                                                 </button>
-                                                <button type="submit" name="button" class="btn btn-danger">
+                                                <button type="submit" name="button" class="btn btn-danger" name="C1OFF">
                                                     Desliga
                                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                                 </button>
@@ -71,11 +125,11 @@
                                         <tr>
                                             <td>Comodo 02</td>
                                             <td>
-                                                <button type="submit" name="button" class="btn btn-success">
+                                                <button type="submit" name="button" class="btn btn-success" name="C2ON">
                                                     Liga
                                                     <i class="fa fa-star" aria-hidden="true"></i>
                                                 </button>
-                                                <button type="submit" name="button" class="btn btn-danger">
+                                                <button type="submit" name="button" class="btn btn-danger" name="C2Off">
                                                     Desliga
                                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                                 </button>
@@ -85,11 +139,11 @@
                                         <tr>
                                             <td>Comodo 03</td>
                                             <td>
-                                                <button type="submit" name="button" class="btn btn-success">
+                                                <button type="submit" name="button" class="btn btn-success" name="C3ON">
                                                     Liga
                                                     <i class="fa fa-star" aria-hidden="true"></i>
                                                 </button>
-                                                <button type="submit" name="button" class="btn btn-danger">
+                                                <button type="submit" name="button" class="btn btn-danger" name="C3OFF">
                                                     Desliga
                                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                                 </button>
@@ -99,11 +153,11 @@
                                         <tr>
                                             <td>Comodo 04</td>
                                             <td>
-                                                <button type="submit" name="button" class="btn btn-success">
+                                                <button type="submit" name="button" class="btn btn-success" name="C4ON">
                                                     Liga
                                                     <i class="fa fa-star" aria-hidden="true"></i>
                                                 </button>
-                                                <button type="submit" name="button" class="btn btn-danger">
+                                                <button type="submit" name="button" class="btn btn-danger" name="C4OFF">
                                                     Desliga
                                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                                 </button>
@@ -113,11 +167,11 @@
                                         <tr>
                                             <td>Comodo 05</td>
                                             <td>
-                                                <button type="submit" name="button" class="btn btn-success">
+                                                <button type="submit" name="button" class="btn btn-success" name="C5ON">
                                                     Liga
                                                     <i class="fa fa-star" aria-hidden="true"></i>
                                                 </button>
-                                                <button type="submit" name="button" class="btn btn-danger">
+                                                <button type="submit" name="button" class="btn btn-danger" name="C5OFF">
                                                     Desliga
                                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                                 </button>
@@ -127,11 +181,11 @@
                                         <tr>
                                             <td>Comodo 06</td>
                                             <td>
-                                                <button type="submit" name="button" class="btn btn-success">
+                                                <button type="submit" name="button" class="btn btn-success" name="C6ON">
                                                     Liga
                                                     <i class="fa fa-star" aria-hidden="true"></i>
                                                 </button>
-                                                <button type="submit" name="button" class="btn btn-danger">
+                                                <button type="submit" name="button" class="btn btn-danger" name="C6OFF">
                                                     Desliga
                                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                                 </button>
