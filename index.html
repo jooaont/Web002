@@ -1,106 +1,137 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-    	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-    	
-      <title> Automação </title>
-    </head>
-	  <?php
+<html lang="pt-br">
+<head>
 
-		if (isset($_POST['LightON'])){
-	  exec("sudo python /var/www/RPY/liga.py");
-		$texto =" Comodo 01 ligado"
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-		} else (isset($_POST['LightOFF'])) {
-	  exec("sudo python /var/www/RPY/desliga.py");
-		$texto= " Comodo Desligado"
-		}	
+    <title>Automação</title>
 
-		if (isset($_POST['OpenClosed'])){
-	  exec("sudo python /var/www/RPY/janelaaberta.py");
-		$texto =" Janela Aberta"
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-		} else (isset($_POST['ClosedWindow'])) {
-	  exec("sudo python /var/www/RPY/janelafechada.py");
-		$texto= " Janela Fechada"
-		}	
-		if (isset($_POST['GolfinhoON'])){
-	  exec("sudo python /var/www/RPY/golfinholigado.py");
-		$texto =" Golfinho ligado"
+    <!-- application Core CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
 
-		} else (isset($_POST['GolfinhoOFF'])) {
-	  exec("sudo python /var/www/RPY/golfinhodesligado.py");
-		$texto= " Golfinho Desligado"
-		}
+    <!-- Custom Fonts -->
+    <script src="https://use.fontawesome.com/d1a2bd6b35.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
 
-?>
-    <body>
-	    <table style="width:100%">
-	  <tr>
-	    <th>Luzes</th>
-	    <th>Motores</th> 
-	    <th>Externo</th>
-	  </tr>
-	  <tr>
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round" name="LightON" name="LightOFF"></div>
-	    </label> Comodo 01 </td>
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round" name="OpenClosed" name="ClosedWindow"></div>
-	    </label> Janela</td> 
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round" name="GolfinhoON" name="GolfinhoOFF"></div>
-	    </label> Golfinho</td>
-	  </tr>
-	  <tr>
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round"></div>
-	    </label> Comodo 02</td>
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round"></div>
-	    </label> Portão</td> 
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round"></div>
-	    </label> Tomada</td>
-	  </tr>
-	  <tr>
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round"></div>
-	    </label>Comodo 03</td>
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round"></div>
-	    </label> Garagem</td> 
-	  </tr>
-	  <tr>
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round"></div>
-	    </label>Comodo 04</td>
-	  </tr>
-	  <tr>
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round"></div>
-	    </label>Comodo 05</td>
-	  </tr>
-	    <tr>
-	    <td><label class="switch">
-		  <input type="checkbox">
-		  <div class="slider round"></div>
-	    </label>Comodo 06</td>
-	  </tr>
-	
-    
-    </body>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-	  
-    </html>
-    
+</head>
+
+<body>
+
+    <div class="container-fluid">
+    <!-- Page Content -->
+        <header class="header">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Controle Sistema de Automação</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </header>
+        <!-- /.row -->
+        <main >
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             Luzes
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>Comodo 01</td>
+                                        <td><button type="button" name="button"></button></td>
+                                        <td><span class="label label-success">Ativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Comodo 02</td>
+                                        <td><button type="button" name="button"></button></td>
+                                        <td><span class="label label-success">Ativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Comodo 03</td>
+                                        <td><button type="button" name="button"></button></td>
+                                        <td><span class="label label-success">Ativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Comodo 04</td>
+                                        <td><button type="button" name="button"></button></td>
+                                        <td><span class="label label-success">Ativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Comodo 05</td>
+                                        <td><button type="button" name="button"></button></td>
+                                        <td><span class="label label-success">Ativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Comodo 06</td>
+                                        <td><button type="button" name="button"></button></td>
+                                        <td><span class="label label-success">Ativo</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Motores
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Externo
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /.row -->
+        </main>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
